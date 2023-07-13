@@ -19,3 +19,4 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	GameEngineWindow::MessageLoop(hInstance, nullptr, nullptr, nullptr);
 }
 
+	
