@@ -7,18 +7,21 @@ class GameEngineDirectory : public GameEnginePath
 public:
 	// constrcuter destructer
 	GameEngineDirectory();
-	GameEngineDirectory(const std::string& _path);
+	GameEngineDirectory(std::string_view _path);
 	~GameEngineDirectory();
 
 	// delete Function
-	GameEngineDirectory(const GameEngineDirectory& _Other) = delete;
-	GameEngineDirectory(GameEngineDirectory&& _Other) noexcept = delete;
-	GameEngineDirectory& operator=(const GameEngineDirectory& _Other) = delete;
-	GameEngineDirectory& operator=(GameEngineDirectory&& _Other) noexcept = delete;
+	//GameEngineDirectory(const GameEngineDirectory& _Other) = delete;
+	//GameEngineDirectory(GameEngineDirectory&& _Other) noexcept = delete;
+	//GameEngineDirectory& operator=(const GameEngineDirectory& _Other) = delete;
+	//GameEngineDirectory& operator=(GameEngineDirectory&& _Other) noexcept = delete;
 
-	std::vector<class GameEngineFile> GetAllFile(std::vector<std::string> _Ext);
+	std::vector<class GameEngineFile> GetAllFile(std::vector<std::string> _Ext = std::vector<std::string>());
+
+	std::vector<GameEngineDirectory> GetAllDirectory();
 
 protected:
+	void RecursiveAllDirectory(std::string _Path, std::vector<class GameEngineDirectory>& _Return);
 
 private:
 
