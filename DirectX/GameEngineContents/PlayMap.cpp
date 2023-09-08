@@ -12,7 +12,7 @@ PlayMap::~PlayMap()
 {
 }
 
-void PlayMap::Update(float _DeltaTime)
+void PlayMap::Update(float _Delta)
 {
 	//static float Time = 5.0f;
 	//Time -= _DeltaTime;
@@ -22,6 +22,28 @@ void PlayMap::Update(float _DeltaTime)
 	//	Renderer->Death();
 	//	Renderer = nullptr;
 	//}
+
+	float Speed = 100.0f;
+
+	if (GameEngineInput::IsPress('A'))
+	{
+		Transform.AddLocalPosition(float4::LEFT * _Delta * Speed);
+	}
+
+	if (GameEngineInput::IsPress('D'))
+	{
+		Transform.AddLocalPosition(float4::RIGHT * _Delta * Speed);
+	}
+
+	if (GameEngineInput::IsPress('W'))
+	{
+		Transform.AddLocalPosition(float4::UP * _Delta * Speed);
+	}
+
+	if (GameEngineInput::IsPress('S'))
+	{
+		Transform.AddLocalPosition(float4::DOWN * _Delta * Speed);
+	}
 }
 
 void PlayMap::Start()
@@ -36,6 +58,8 @@ void PlayMap::Start()
 		HScale.Y *= -1.0f;
 
 		Renderer->Transform.SetLocalPosition(HScale);
+		Renderer->Transform.SetLocalScale({ 960.0f, 720.0f, 500.0f, 1.0f });
+		//Renderer->Transform.SetLocalPosition();
 	}
 }
 

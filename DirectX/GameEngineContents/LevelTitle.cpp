@@ -39,6 +39,10 @@ void LevelTitle::Start()
 
 void LevelTitle::Update(float _Delta)
 {
+	if (GameEngineInput::IsPress('P'))
+	{
+		GameEngineCore::ChangeLevel("PlayLevel");
+	}
 }
 
 void LevelTitle::LevelStart(GameEngineLevel* _PrevLevel)

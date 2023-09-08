@@ -7,12 +7,12 @@
 #include "Monster.h"
 #include "ContentsEnum.h"
 
-Player::Player() 
+Player::Player()
 {
-	
+
 }
 
-Player::~Player() 
+Player::~Player()
 {
 }
 
@@ -20,8 +20,8 @@ void Player::Start()
 {
 	{
 		// 줄줄이 사탕 식으로 만들려고.
-		/*TestCollision = CreateComponent<GameEngineComponent>(30);
-		TestCollision->Transform.SetLocalScale({ 30, 30, 1 });*/
+		TestCollision = CreateComponent<GameEngineComponent>(30);
+		TestCollision->Transform.SetLocalScale({ 30, 30, 1 });
 
 		MainSpriteRenderer = CreateComponent<GameEngineSpriteRenderer>(30);
 
@@ -47,7 +47,7 @@ void Player::Start()
 		// MainSpriteRenderer->Transform.SetLocalScale({5, 5});
 		// MainSpriteRenderer->AutoSpriteSizeOn();
 		// MainSpriteRenderer->SetAutoScaleRatio(2.0f);
-		MainSpriteRenderer->Transform.SetLocalScale({-100.0f, 100.0f, 1.0f});
+		MainSpriteRenderer->Transform.SetLocalScale({ -100.0f, 100.0f, 1.0f });
 	}
 
 	{
@@ -73,24 +73,24 @@ void Player::Update(float _Delta)
 	EventParameter Event;
 
 	Event.Enter = [](GameEngineCollision* Col)
-		{
-			int a = 0;
-		};
+	{
+		int a = 0;
+	};
 
 	Event.Stay = [](GameEngineCollision* Col)
-		{
-			int a = 0;
-		};
+	{
+		int a = 0;
+	};
 
 
 	Event.Exit = [](GameEngineCollision* Col)
-		{
-			Col->GetActor()->Death();
+	{
+		Col->GetActor()->Death();
 
-			int a = 0;
-		};
+		int a = 0;
+	};
 
-	//Col->CollisionEvent(ContentsCollisionType::Monster, Event);
+	Col->CollisionEvent(ContentsCollisionType::Monster, Event);
 
 	//Col->Collision(ContentsCollisionType::Monster, {100.0f, 0.0f, 0.0f}, [](std::vector<std::shared_ptr<GameEngineCollision>>& _Collision)
 	//	{
@@ -133,10 +133,10 @@ void Player::Update(float _Delta)
 
 	float Speed = 100.0f;
 
-	/*if (GameEngineInput::IsDown('A'))
+	if (GameEngineInput::IsDown('A'))
 	{
 		MainSpriteRenderer->AnimationPauseSwitch();
-	}*/
+	}
 
 
 	if (GameEngineInput::IsPress('A'))
