@@ -1,6 +1,7 @@
 #include "PreCompile.h"
 #include "LevelJungle.h"
 #include "MapImageJungle.h"
+#include "Zero.h"
 
 LevelJungle::LevelJungle()
 {
@@ -19,7 +20,7 @@ void LevelJungle::Start()
 	GetMainCamera()->SetProjectionType(EPROJECTIONTYPE::Orthographic);
 
 
-	//JungleImage 스프라이트 등록
+	//Jungle 맵이미지 스프라이트 등록
 	{
 		GameEngineDirectory Dir;
 		Dir.MoveParentToExistsChild("MegamanX5Resources");
@@ -40,6 +41,26 @@ void LevelJungle::Start()
 	}
 
 
+	//zero 스프라이트 등록
+	{
+		GameEngineDirectory Dir;
+		Dir.MoveParentToExistsChild("MegamanX5Resources");
+		Dir.MoveChild("MegamanX5Resources");
+		Dir.MoveChild("Zero");
+		std::vector<GameEngineFile> Files = Dir.GetAllFile();
+
+		for (size_t i = 0; i < Files.size(); i++)
+		{
+			// 구조적으로 잘 이해하고 있는지를 자신이 명확하게 인지하기 위해서
+			GameEngineFile& File = Files[i];
+			GameEngineTexture::Load(File.GetStringPath());
+		}
+
+		GameEngineSprite::CreateSingle("zeropractice.png");
+
+	}
+
+
 
 	//Jungle 이미지들 가진 액터들 만들기
 	{
@@ -53,6 +74,11 @@ void LevelJungle::Start()
 		
 	}
 
+
+	//zero 캐릭터 actor생성
+	{
+		std::shared_ptr<Zero> PlayerZero = CreateActor<Zero>();
+	}
 }
 
 void LevelJungle::Update(float _Delta)

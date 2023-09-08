@@ -1,6 +1,6 @@
 #pragma once
 
-class Zero
+class Zero : public GameEngineActor
 {
 public:
 	//constructor destructor
@@ -14,7 +14,9 @@ public:
 	Zero&& operator=(Zero&& _Other) noexcept = delete;
 
 protected:
+	void Start() override;
+	void Update(float _Delta) override;
 
 private:
-
+	std::shared_ptr<class GameEngineSpriteRenderer> MainSpriteRenderer;
 };  
