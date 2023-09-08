@@ -167,7 +167,15 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="LevelJungle.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="LevelTitle.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="MapImageJungle.cpp">
       <SubType>
       </SubType>
     </ClCompile>
@@ -212,7 +220,15 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="ContentsEnum.h" />
+    <ClInclude Include="LevelJungle.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="LevelTitle.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="MapImageJungle.h">
       <SubType>
       </SubType>
     </ClInclude>

@@ -24,25 +24,13 @@ void Player::Start()
 		TestCollision->Transform.SetLocalScale({ 30, 30, 1 });
 
 		MainSpriteRenderer = CreateComponent<GameEngineSpriteRenderer>(30);
-
-		//그냥 초록화면
-		//MainSpriteRenderer->SetSprite("HoHoYee_AttackABC2");
+		MainSpriteRenderer->SetSprite("HoHoYee_AttackABC2");
 		/*MainSpriteRenderer->CreateAnimation("Run", "HoHoYee_AttackABC2", 0.05f, -1, -1, true);
 		MainSpriteRenderer->ChangeAnimation("Run");
 		MainSpriteRenderer->SetSamplerState(SamplerOption::LINEAR);
 		MainSpriteRenderer->Transform.SetLocalPosition({ 100.0f, 0.0f, 0.0f });
 
 		MainSpriteRenderer->SetEndEvent("Run", std::bind(&Player::TestEvent, this, std::placeholders::_1));*/
-
-		//여우캐릭터 애니메이션
-		//MainSpriteRenderer->SetSprite("HoHoYee_AttackABC");
-
-		MainSpriteRenderer->CreateAnimation("Run", "HoHoYee_AttackABC", 0.05f, -1, -1, true);
-		MainSpriteRenderer->ChangeAnimation("Run");
-		MainSpriteRenderer->SetSamplerState(SamplerOption::LINEAR);
-		MainSpriteRenderer->Transform.SetLocalPosition({ 100.0f, 0.0f, 0.0f });
-
-		MainSpriteRenderer->SetEndEvent("Run", std::bind(&Player::TestEvent, this, std::placeholders::_1));
 
 		// MainSpriteRenderer->Transform.SetLocalScale({5, 5});
 		// MainSpriteRenderer->AutoSpriteSizeOn();

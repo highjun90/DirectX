@@ -27,6 +27,12 @@
     <ClCompile Include="TitleImage.cpp">
       <Filter>Object</Filter>
     </ClCompile>
+    <ClCompile Include="LevelJungle.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="MapImageJungle.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PreCompile.h" />
@@ -56,6 +62,12 @@
       <Filter>Level</Filter>
     </ClInclude>
     <ClInclude Include="TitleImage.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelJungle.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="MapImageJungle.h">
       <Filter>Object</Filter>
     </ClInclude>
   </ItemGroup>

@@ -18,7 +18,7 @@ void LevelTitle::Start()
 {
 
 
-	//타이틀 리소스 가져오기
+	//타이틀 리소스 (애니메이션)가져오기
 	{
 		GameEngineDirectory Dir;
 		Dir.MoveParentToExistsChild("MegamanX5Resources");
@@ -35,13 +35,19 @@ void LevelTitle::Start()
 	{
 		std::shared_ptr<TitleImage> Object0 = CreateActor<TitleImage>(ContentsObjectType::Player);
 	}
+
 }
 
 void LevelTitle::Update(float _Delta)
 {
-	if (GameEngineInput::IsPress('P'))
+	if (GameEngineInput::IsPress(VK_F12))
 	{
 		GameEngineCore::ChangeLevel("PlayLevel");
+	}
+
+	if (GameEngineInput::IsPress(VK_F2))
+	{
+		GameEngineCore::ChangeLevel("LevelJungle");
 	}
 }
 
