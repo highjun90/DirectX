@@ -19,6 +19,7 @@ enum class ColType
 	MAX,
 };
 
+
 class CollisionData
 {
 public:
@@ -71,7 +72,6 @@ public:
 
 	}
 };
-
 
 // ø÷ ±ª¿Ã. 
 class TransformData 
@@ -262,7 +262,6 @@ public:
 	static bool Collision(const CollisionParameter& _Data);
 
 	CollisionData ColData;
-
 protected:
 
 private:

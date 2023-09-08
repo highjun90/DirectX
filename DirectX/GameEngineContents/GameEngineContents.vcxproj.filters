@@ -18,8 +18,14 @@
     <ClCompile Include="Monster.cpp">
       <Filter>Object</Filter>
     </ClCompile>
-    <ClCompile Include="StageJungle.cpp">
+    <ClCompile Include="Zero.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelTitle.cpp">
       <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleImage.cpp">
+      <Filter>Object</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -43,8 +49,14 @@
     <ClInclude Include="ContentsEnum.h">
       <Filter>Global</Filter>
     </ClInclude>
-    <ClInclude Include="StageJungle.h">
+    <ClInclude Include="Zero.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelTitle.h">
       <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleImage.h">
+      <Filter>Object</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

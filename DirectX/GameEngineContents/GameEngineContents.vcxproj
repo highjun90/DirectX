@@ -167,6 +167,10 @@
       <SubType>
       </SubType>
     </ClCompile>
+    <ClCompile Include="LevelTitle.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="Monster.cpp">
       <SubType>
       </SubType>
@@ -189,11 +193,15 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="StageJungle.cpp">
+    <ClCompile Include="TitleImage.cpp">
       <SubType>
       </SubType>
     </ClCompile>
     <ClCompile Include="TitleLevel.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Zero.cpp">
       <SubType>
       </SubType>
     </ClCompile>
@@ -204,6 +212,10 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="ContentsEnum.h" />
+    <ClInclude Include="LevelTitle.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Monster.h">
       <SubType>
       </SubType>
@@ -221,11 +233,15 @@
       </SubType>
     </ClInclude>
     <ClInclude Include="PreCompile.h" />
-    <ClInclude Include="StageJungle.h">
+    <ClInclude Include="TitleImage.h">
       <SubType>
       </SubType>
     </ClInclude>
     <ClInclude Include="TitleLevel.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Zero.h">
       <SubType>
       </SubType>
     </ClInclude>

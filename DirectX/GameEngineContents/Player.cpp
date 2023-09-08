@@ -20,17 +20,29 @@ void Player::Start()
 {
 	{
 		// 줄줄이 사탕 식으로 만들려고.
-		TestCollision = CreateComponent<GameEngineComponent>(30);
-		TestCollision->Transform.SetLocalScale({ 30, 30, 1 });
+		/*TestCollision = CreateComponent<GameEngineComponent>(30);
+		TestCollision->Transform.SetLocalScale({ 30, 30, 1 });*/
 
 		MainSpriteRenderer = CreateComponent<GameEngineSpriteRenderer>(30);
-		MainSpriteRenderer->SetSprite("HoHoYee_AttackABC2");
+
+		//그냥 초록화면
+		//MainSpriteRenderer->SetSprite("HoHoYee_AttackABC2");
 		/*MainSpriteRenderer->CreateAnimation("Run", "HoHoYee_AttackABC2", 0.05f, -1, -1, true);
 		MainSpriteRenderer->ChangeAnimation("Run");
 		MainSpriteRenderer->SetSamplerState(SamplerOption::LINEAR);
 		MainSpriteRenderer->Transform.SetLocalPosition({ 100.0f, 0.0f, 0.0f });
 
 		MainSpriteRenderer->SetEndEvent("Run", std::bind(&Player::TestEvent, this, std::placeholders::_1));*/
+
+		//여우캐릭터 애니메이션
+		//MainSpriteRenderer->SetSprite("HoHoYee_AttackABC");
+
+		MainSpriteRenderer->CreateAnimation("Run", "HoHoYee_AttackABC", 0.05f, -1, -1, true);
+		MainSpriteRenderer->ChangeAnimation("Run");
+		MainSpriteRenderer->SetSamplerState(SamplerOption::LINEAR);
+		MainSpriteRenderer->Transform.SetLocalPosition({ 100.0f, 0.0f, 0.0f });
+
+		MainSpriteRenderer->SetEndEvent("Run", std::bind(&Player::TestEvent, this, std::placeholders::_1));
 
 		// MainSpriteRenderer->Transform.SetLocalScale({5, 5});
 		// MainSpriteRenderer->AutoSpriteSizeOn();
@@ -61,24 +73,24 @@ void Player::Update(float _Delta)
 	EventParameter Event;
 
 	Event.Enter = [](GameEngineCollision* Col)
-	{
-		int a = 0;
-	};
+		{
+			int a = 0;
+		};
 
 	Event.Stay = [](GameEngineCollision* Col)
-	{
-		int a = 0;
-	};
+		{
+			int a = 0;
+		};
 
 
 	Event.Exit = [](GameEngineCollision* Col)
-	{
-		Col->GetActor()->Death();
+		{
+			Col->GetActor()->Death();
 
-		int a = 0;
-	};
+			int a = 0;
+		};
 
-	Col->CollisionEvent(ContentsCollisionType::Monster, Event);
+	//Col->CollisionEvent(ContentsCollisionType::Monster, Event);
 
 	//Col->Collision(ContentsCollisionType::Monster, {100.0f, 0.0f, 0.0f}, [](std::vector<std::shared_ptr<GameEngineCollision>>& _Collision)
 	//	{
@@ -121,10 +133,10 @@ void Player::Update(float _Delta)
 
 	float Speed = 100.0f;
 
-	if (GameEngineInput::IsDown('A'))
+	/*if (GameEngineInput::IsDown('A'))
 	{
 		MainSpriteRenderer->AnimationPauseSwitch();
-	}
+	}*/
 
 
 	if (GameEngineInput::IsPress('A'))

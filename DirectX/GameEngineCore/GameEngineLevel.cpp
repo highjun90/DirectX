@@ -82,6 +82,7 @@ void GameEngineLevel::AllReleaseCheck()
 		Pair.second->AllReleaseCheck();
 	}
 
+
 	// 들고있는 녀석들은 전부다 액터겠지만
 	for (std::pair<const int, std::list<std::shared_ptr<GameEngineObject>>>& _Pair : Childs)
 	{
