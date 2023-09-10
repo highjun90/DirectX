@@ -67,7 +67,7 @@ void PlayLevel::Start()
 	}
 
 	{
-		GameEngineRandom NewRanadom;
+		/*GameEngineRandom NewRanadom;
 		for (size_t i = 0; i < 10; i++)
 		{
 			std::shared_ptr<Monster> Object = CreateActor<Monster>(ContentsObjectType::Monster);
@@ -77,7 +77,7 @@ void PlayLevel::Start()
 		std::shared_ptr<PlayMap> Object0 = CreateActor<PlayMap>(ContentsObjectType::Monster);
 		std::shared_ptr<PlayMap> Object1 = CreateActor<PlayMap>(ContentsObjectType::Monster);
 		std::shared_ptr<PlayMap> Object2 = CreateActor<PlayMap>(ContentsObjectType::Monster);
-		std::shared_ptr<PlayMap> Object3 = CreateActor<PlayMap>(ContentsObjectType::Monster);
+		std::shared_ptr<PlayMap> Object3 = CreateActor<PlayMap>(ContentsObjectType::Monster);*/
 	}
 
 	{

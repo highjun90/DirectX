@@ -25,6 +25,7 @@ GameEngineRenderer::~GameEngineRenderer()
 {
 }
 
+
 // 카메라 내부에서의 순서 변경
 void GameEngineRenderer::SetRenderOrder(int _Order)
 {
@@ -49,6 +50,7 @@ void GameEngineRenderer::SetCameraOrder(int _Order)
 
 void GameEngineRenderer::Start()
 {
+	DataTransform = &Transform;
 	SetCameraOrder(0);
 }
 
@@ -106,7 +108,7 @@ void GameEngineRenderer::ResSetting()
 
 		if (nullptr != Buffer)
 		{
-			const TransformData& Data = Transform.GetConstTransformDataRef();
+			const TransformData& Data = DataTransform->GetConstTransformDataRef();
 			Buffer->ChangeData(Data);
 			Buffer->Setting(0);
 		}

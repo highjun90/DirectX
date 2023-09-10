@@ -11,33 +11,6 @@ MapImageJungle::~MapImageJungle()
 
 void MapImageJungle::Start()
 {
-	//{
-	//	// 줄줄이 사탕 식으로 만들려고.
-	//	TestCollision = CreateComponent<GameEngineComponent>(30);
-	//	TestCollision->Transform.SetLocalScale({ 30, 30, 1 });
-
-	//	MainSpriteRenderer = CreateComponent<GameEngineSpriteRenderer>(30);
-	//	MainSpriteRenderer->SetSprite("HoHoYee_AttackABC2");
-	//	/*MainSpriteRenderer->CreateAnimation("Run", "HoHoYee_AttackABC2", 0.05f, -1, -1, true);
-	//	MainSpriteRenderer->ChangeAnimation("Run");
-	//	MainSpriteRenderer->SetSamplerState(SamplerOption::LINEAR);
-	//	MainSpriteRenderer->Transform.SetLocalPosition({ 100.0f, 0.0f, 0.0f });
-
-	//	MainSpriteRenderer->SetEndEvent("Run", std::bind(&Player::TestEvent, this, std::placeholders::_1));*/
-
-	//	// MainSpriteRenderer->Transform.SetLocalScale({5, 5});
-	//	// MainSpriteRenderer->AutoSpriteSizeOn();
-	//	// MainSpriteRenderer->SetAutoScaleRatio(2.0f);
-	//	MainSpriteRenderer->Transform.SetLocalScale({ -100.0f, 100.0f, 1.0f });
-	//}
-
-	//{
-	//	Col = CreateComponent<GameEngineCollision>(ContentsCollisionType::Player);
-	//	Col->Transform.SetLocalScale({ -100.0f, 100.0f, 1.0f });
-	//}
-
-	//float4 HalfWindowScale = GameEngineCore::MainWindow.GetScale().Half();
-	//Transform.SetLocalPosition({ HalfWindowScale.X, -HalfWindowScale.Y, -500.0f });
 	
 	//타이틀이미지 컴포넌트
 	//{
@@ -52,26 +25,13 @@ void MapImageJungle::Start()
 		//MainSpriteRenderer->ChangeAnimation("TitleImageAnimation");
 		SpriteRenderer0->SetSamplerState(SamplerOption::POINT);
 		SpriteRenderer0->Transform.SetLocalPosition({ 0.0f, 0.0f, 0.0f });
-		SpriteRenderer0->Transform.SetLocalScale({ 960.0f, 720.0f, 5.0f });
+
+		SpriteRenderer0->SetImageScale({ 960.0f, 720.0f, 5.0f });
+		//SpriteRenderer0->Transform.SetLocalScale({ 960.0f, 720.0f, 5.0f });
 	}
 
 	float4 HalfWindowScale = GameEngineCore::MainWindow.GetScale().Half();
 	Transform.SetLocalPosition({ HalfWindowScale.X, -HalfWindowScale.Y, -500.0f });
-
-	//{
-	//	for (int i = 0; i < MapImageCount; i++)
-	//	{
-	//		SpriteRenderers[i] = CreateComponent<GameEngineSpriteRenderer>(20);
-
-	//		//여기서부터 작업필요
-	//		SpriteRenderers[i]->SetSprite("Jungle0.PNG");
-	//		SpriteRenderers[i]->SetSamplerState(SamplerOption::POINT);
-	//		SpriteRenderers[i]->Transform.SetLocalPosition({ 0.0f, 0.0f, 0.0f });
-	//		SpriteRenderers[i]->Transform.SetLocalScale({ 960.0f, 720.0f, 5.0f });
-
-
-	//	}
-	//}
 }
 
 

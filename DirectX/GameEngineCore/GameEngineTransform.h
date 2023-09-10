@@ -186,6 +186,11 @@ public:
 		TransformUpdate();
 	}
 
+	void AddLocalScale(const float4& _Value)
+	{
+		TransData.Scale += _Value;
+		TransformUpdate();
+	}
 
 
 
