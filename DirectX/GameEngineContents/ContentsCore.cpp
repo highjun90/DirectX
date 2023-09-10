@@ -15,6 +15,9 @@ ContentsCore::~ContentsCore()
 
 void ContentsCore::Start()
 {
+	//기본적으로 SpriteRenderer를 만들때 넣어줄 샘플러를 지정합니다. 이 코드 없으면 static 초기화 에러가 날것임
+	GameEngineSpriteRenderer::SetDefaultSampler("POINT");
+
 	GameEngineCore::CreateLevel<PlayLevel>("PlayLevel");
 	GameEngineCore::CreateLevel<TitleLevel>("TitleLevel");
 	//GameEngineCore::ChangeLevel("PlayLevel");

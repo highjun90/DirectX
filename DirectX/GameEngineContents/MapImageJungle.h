@@ -13,7 +13,10 @@ public:
 	MapImageJungle& operator=(const MapImageJungle& _Other) = delete;
 	MapImageJungle&& operator=(MapImageJungle&& _Other) noexcept = delete;
 
-
+	std::shared_ptr<class GameEngineSpriteRenderer> GetSpriteRenderer()
+	{
+		return SpriteRenderer0;;
+	}
 
 
 protected:

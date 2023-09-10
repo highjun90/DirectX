@@ -16,22 +16,22 @@ void MapImageJungle::Start()
 	//{
 
 	{
-		SpriteRenderer0 = CreateComponent<GameEngineSpriteRenderer>(20);
+	    //SpriteRenderer0 = CreateComponent<GameEngineSpriteRenderer>(20);
 
 		//MainSpriteRenderer->SetSprite("PlayerSelectImage0.PNG");
-		SpriteRenderer0 ->SetSprite("Jungle0.PNG");
+	    //SpriteRenderer0 ->SetSprite("Jungle0.PNG");
 		//MainSpriteRenderer->SetSprite("Testmap.PNG");
 		//MainSpriteRenderer->CreateAnimation("TitleImageAnimation", "TitleImage", 0.6f, -1, -1, true);
 		//MainSpriteRenderer->ChangeAnimation("TitleImageAnimation");
-		SpriteRenderer0->SetSamplerState(SamplerOption::POINT);
-		SpriteRenderer0->Transform.SetLocalPosition({ 0.0f, 0.0f, 0.0f });
+		//SpriteRenderer0->SetSamplerState(SamplerOption::POINT);
+		//SpriteRenderer0->Transform.SetLocalPosition({ 0.0f, 0.0f, 0.0f });
 
-		SpriteRenderer0->SetImageScale({ 960.0f, 720.0f, 5.0f });
+		//SpriteRenderer0->SetImageScale({ 960.0f, 720.0f, 5.0f });
 		//SpriteRenderer0->Transform.SetLocalScale({ 960.0f, 720.0f, 5.0f });
 	}
 
-	float4 HalfWindowScale = GameEngineCore::MainWindow.GetScale().Half();
-	Transform.SetLocalPosition({ HalfWindowScale.X, -HalfWindowScale.Y, -500.0f });
+	//float4 HalfWindowScale = GameEngineCore::MainWindow.GetScale().Half();
+	//Transform.SetLocalPosition({ HalfWindowScale.X, -HalfWindowScale.Y, -500.0f });
 }
 
 

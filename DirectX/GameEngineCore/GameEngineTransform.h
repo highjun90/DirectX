@@ -167,6 +167,19 @@ public:
 		TransformUpdate();
 	}
 
+	void AddLocalScale(const float4& _Value)
+	{
+		TransData.Scale += _Value;
+		TransformUpdate();
+	}
+
+	void SetLocalRotation(const float4& _Value)
+	{
+		TransData.Rotation = _Value;
+		TransformUpdate();
+	}
+
+
 	void AddLocalRotation(const float4& _Value)
 	{
 		TransData.Rotation += _Value;
@@ -186,11 +199,7 @@ public:
 		TransformUpdate();
 	}
 
-	void AddLocalScale(const float4& _Value)
-	{
-		TransData.Scale += _Value;
-		TransformUpdate();
-	}
+
 
 
 

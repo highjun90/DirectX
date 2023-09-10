@@ -62,9 +62,20 @@ void LevelJungle::Start()
 
 
 
-	//Jungle 이미지들 가진 액터들 만들기
+	//Jungle 맵 이미지들 가진 액터들 만들기
 	{
-		std::shared_ptr<MapImageJungle> ImageJungle0 = CreateActor<MapImageJungle>();
+		std::shared_ptr<MapImageJungle> MapJungle0 = CreateActor<MapImageJungle>();
+		MapJungle0->Transform.SetLocalPosition({ HalfWindowScale.X, -HalfWindowScale.Y, -500.0f });
+		std::shared_ptr<class GameEngineSpriteRenderer> MapSpriteRenderer0 = MapJungle0->GetSpriteRenderer();
+		MapSpriteRenderer0 = MapJungle0->CreateComponent<GameEngineSpriteRenderer>(20);
+		MapSpriteRenderer0->SetSprite("Jungle0.PNG");
+		MapSpriteRenderer0->SetSamplerState(SamplerOption::POINT);
+		MapSpriteRenderer0->Transform.SetLocalPosition({ 0.0f, 0.0f, 0.0f });
+		MapSpriteRenderer0->SetImageScale({ 960.0f, 720.0f, 5.0f });
+
+
+		
+
 		//ImageJungle0->GetMainSpriteRenderer() = ImageJungle0->CreateComponent<GameEngineSpriteRenderer>(15);
 		//std::shared_ptr<GameEngineTexture> Tex = GameEngineTexture::Find("Jungle0.png");
 		//ImageJungle0->GetMainSpriteRenderer()->SetSprite("Jungle0.png");
