@@ -49,14 +49,9 @@ void LevelTitle::Update(float _Delta)
 	{
 		GameEngineCore::ChangeLevel("LevelCharacterSelect");
 	}
-	if (GameEngineInput::IsPress(VK_F3))
+	/*if (GameEngineInput::IsPress(VK_F3))
 	{
 		GameEngineCore::ChangeLevel("LevelJungle");
-	}
-
-	/*if (GameEngineInput::IsPress('Z'))
-	{
-		GameEngineCore::ChangeLevel("LevelCharacterSelect");
 	}*/
 }
 
