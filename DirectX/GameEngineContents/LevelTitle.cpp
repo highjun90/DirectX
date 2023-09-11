@@ -40,15 +40,24 @@ void LevelTitle::Start()
 
 void LevelTitle::Update(float _Delta)
 {
+	//레벨바꾸기
 	if (GameEngineInput::IsPress(VK_F12))
 	{
 		GameEngineCore::ChangeLevel("PlayLevel");
 	}
-
 	if (GameEngineInput::IsPress(VK_F2))
+	{
+		GameEngineCore::ChangeLevel("LevelCharacterSelect");
+	}
+	if (GameEngineInput::IsPress(VK_F3))
 	{
 		GameEngineCore::ChangeLevel("LevelJungle");
 	}
+
+	/*if (GameEngineInput::IsPress('Z'))
+	{
+		GameEngineCore::ChangeLevel("LevelCharacterSelect");
+	}*/
 }
 
 void LevelTitle::LevelStart(GameEngineLevel* _PrevLevel)

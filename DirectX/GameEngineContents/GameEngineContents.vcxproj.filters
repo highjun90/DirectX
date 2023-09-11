@@ -24,14 +24,20 @@
     <ClCompile Include="LevelTitle.cpp">
       <Filter>Level</Filter>
     </ClCompile>
-    <ClCompile Include="TitleImage.cpp">
-      <Filter>Object</Filter>
-    </ClCompile>
     <ClCompile Include="LevelJungle.cpp">
       <Filter>Level</Filter>
     </ClCompile>
+    <ClCompile Include="LevelCharacterSelect.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
     <ClCompile Include="MapImageJungle.cpp">
-      <Filter>Object</Filter>
+      <Filter>Object\MapIamge</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleImage.cpp">
+      <Filter>Object\MapIamge</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterSelectImage.cpp">
+      <Filter>Object\MapIamge</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,14 +67,20 @@
     <ClInclude Include="LevelTitle.h">
       <Filter>Level</Filter>
     </ClInclude>
-    <ClInclude Include="TitleImage.h">
-      <Filter>Object</Filter>
-    </ClInclude>
     <ClInclude Include="LevelJungle.h">
       <Filter>Level</Filter>
     </ClInclude>
+    <ClInclude Include="LevelCharacterSelect.h">
+      <Filter>Level</Filter>
+    </ClInclude>
     <ClInclude Include="MapImageJungle.h">
-      <Filter>Object</Filter>
+      <Filter>Object\MapIamge</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleImage.h">
+      <Filter>Object\MapIamge</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterSelectImage.h">
+      <Filter>Object\MapIamge</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +92,9 @@
     </Filter>
     <Filter Include="Global">
       <UniqueIdentifier>{ca09bba4-fac2-48d7-bd82-8680ddecfb32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\MapIamge">
+      <UniqueIdentifier>{e09ac3f3-ca11-4652-919e-10a3d11d65c7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

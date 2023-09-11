@@ -62,7 +62,7 @@ void LevelJungle::Start()
 		GameEngineSprite::CreateSingle("Jungle0.png");
 		GameEngineSprite::CreateSingle("Jungle1.png");
 		GameEngineSprite::CreateSingle("Jungle2.png");
-		GameEngineSprite::CreateSingle("Jungle3.png");
+		//GameEngineSprite::CreateSingle("Jungle3.png");
 		//GameEngineSprite::CreateSingle("Jungle4.png");
 		//GameEngineSprite::CreateSingle("Jungle5.png");
 		//GameEngineSprite::CreateSingle("Jungle6.png");
@@ -144,14 +144,14 @@ void LevelJungle::Start()
 		MapSpriteRenderer2->Transform.AddLocalPosition({ 960.f * 2, 0.0f });
 		MapSpriteRenderer2->SetImageScale({ 960.0f, 720.0f, 5.0f });
 
-		std::shared_ptr<MapImageJungle> MapJungle3 = CreateActor<MapImageJungle>();
+		/*std::shared_ptr<MapImageJungle> MapJungle3 = CreateActor<MapImageJungle>();
 		MapJungle3->Transform.SetLocalPosition({ HalfWindowScale.X, -HalfWindowScale.Y, -500.0f });
 		std::shared_ptr<class GameEngineSpriteRenderer> MapSpriteRenderer3 = MapJungle3->GetSpriteRenderer();
 		MapSpriteRenderer3 = MapJungle3->CreateComponent<GameEngineSpriteRenderer>(20);
 		MapSpriteRenderer3->SetSprite("Jungle3.PNG");
 		MapSpriteRenderer3->SetSamplerState(SamplerOption::POINT);
 		MapSpriteRenderer3->Transform.AddLocalPosition({ 960.f * 3, 0.0f });
-		MapSpriteRenderer3->SetImageScale({ 960.0f, 720.0f, 5.0f });
+		MapSpriteRenderer3->SetImageScale({ 960.0f, 720.0f, 5.0f });*/
 
 
 	}
@@ -186,10 +186,14 @@ void LevelJungle::Start()
 
 void LevelJungle::Update(float _Delta)
 {
-	//타이틀화면가기
+	//레벨바꾸기
 	if (GameEngineInput::IsPress(VK_F1))
 	{
 		GameEngineCore::ChangeLevel("LevelTitle");
+	}
+	if (GameEngineInput::IsPress(VK_F2))
+	{
+		GameEngineCore::ChangeLevel("LevelCharacterSelect");
 	}
 
 	//카메라 위치변경

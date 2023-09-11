@@ -163,7 +163,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CharacterSelectImage.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="ContentsCore.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="LevelCharacterSelect.cpp">
       <SubType>
       </SubType>
     </ClCompile>
@@ -215,11 +223,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CharacterSelectImage.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="ContentsCore.h">
       <SubType>
       </SubType>
     </ClInclude>
     <ClInclude Include="ContentsEnum.h" />
+    <ClInclude Include="LevelCharacterSelect.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="LevelJungle.h">
       <SubType>
       </SubType>
