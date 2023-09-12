@@ -8,17 +8,17 @@ class ContentsCore : public GameEngineObject
 public:
 	static std::string GetWindowTitle()
 	{
-		return "Megaman X5";
+		return "MainWindow";
 	}
 
 	static float4 GetStartWindowSize()
 	{
-		return {960, 720};
+		return {1280, 720};
 	}
 
 	static float4 GetStartWindowPos()
 	{
-		return { 0, 0 };
+		return { 200, 200 };
 	}
 
 	// constrcuter destructer

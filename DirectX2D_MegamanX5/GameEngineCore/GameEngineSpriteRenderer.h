@@ -69,8 +69,8 @@ public:
 	void SetSprite(std::string_view _Name, unsigned int index = 0);
 
 	void CreateAnimation(
-		std::string_view _AnimationName, 
-		std::string_view _SpriteName, 
+		std::string_view _AnimationName,
+		std::string_view _SpriteName,
 		float _Inter = 0.1f,
 		unsigned int _Start = -1,
 		unsigned int _End = -1,
@@ -92,8 +92,7 @@ public:
 		AutoScaleRatio = _Ratio;
 	}
 
-
-	void Flip()   //스케일값 뒤집기
+	void Flip()
 	{
 		AutoScaleRatio.X = -AutoScaleRatio.X;
 	}
@@ -114,7 +113,7 @@ public:
 		return CurFrameAnimations->IsEnd;
 	}
 
-	bool IsCurAnimation(std::string_view _AnimationName) //현재 애니메이션 이름과 인자값에 넣어준 이름이 같은지 검사
+	bool IsCurAnimation(std::string_view _AnimationName)
 	{
 		return CurFrameAnimations->AnimationName == _AnimationName;
 	}
@@ -126,14 +125,14 @@ public:
 	void SetStartEvent(std::string_view _AnimationName, std::function<void(GameEngineSpriteRenderer*)> _Function);
 	void SetEndEvent(std::string_view _AnimationName, std::function<void(GameEngineSpriteRenderer*)> _Function);
 	void SetFrameEvent(std::string_view _AnimationName, int _Frame, std::function<void(GameEngineSpriteRenderer*)> _Function);
-	
+
 	void SetPivotType(PivotType _Type);
 
 	void SetImageScale(const float4& _Scale);
 	void AddImageScale(const float4& _Scale);
 
 	static void SetDefaultSampler(std::string_view _SamplerName);
-
+	
 	std::shared_ptr<GameEngineSprite> GetSprite()
 	{
 		return Sprite;
@@ -143,7 +142,7 @@ public:
 		return CurSprite;
 	}
 
-	inline unsigned int GetCurIndex() const  //현재 재생중인 애니메이션의 현재 인덱스 
+	inline unsigned int GetCurIndex() const
 	{
 		return CurFrameAnimations->CurIndex;
 	}
@@ -170,7 +169,7 @@ private:
 	float4 AutoScaleRatio = { 1.0f,1.0f,1.0f };
 	bool IsPause = false;
 
-	float4 Pivot = { 0.5f, 0.5f };
+	float4 Pivot = {0.5f, 0.5f};
 
 	GameEngineTransform ImageTransform;
 };

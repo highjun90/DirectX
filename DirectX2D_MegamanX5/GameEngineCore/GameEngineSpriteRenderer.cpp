@@ -6,7 +6,6 @@
 
 std::shared_ptr<class GameEngineSampler> GameEngineSpriteRenderer::DefaultSampler;
 
-
 void GameEngineFrameAnimation::EventCall(int _Frame)
 {
 	if (true == FrameEventFunction.contains(Index[_Frame]))
@@ -85,7 +84,7 @@ GameEngineSpriteRenderer::~GameEngineSpriteRenderer()
 {
 }
 
-void GameEngineSpriteRenderer::Start()
+void GameEngineSpriteRenderer::Start() 
 {
 	GameEngineRenderer::Start();
 
@@ -271,6 +270,7 @@ void GameEngineSpriteRenderer::ChangeAnimation(std::string_view _AnimationName, 
 	CurFrameAnimations = FrameAnimations[UpperName];
 	CurFrameAnimations->Reset();
 	CurFrameAnimations->CurIndex = _FrameIndex;
+	CurSprite = CurFrameAnimations->Sprite->GetSpriteData(CurFrameAnimations->CurIndex);
 }
 
 void GameEngineSpriteRenderer::AutoSpriteSizeOn()
@@ -282,6 +282,7 @@ void GameEngineSpriteRenderer::AutoSpriteSizeOff()
 {
 	IsImageSize = false;
 }
+
 
 void GameEngineSpriteRenderer::SetSamplerState(SamplerOption _Option)
 {
@@ -366,7 +367,7 @@ void GameEngineSpriteRenderer::SetPivotType(PivotType _Type)
 	switch (_Type)
 	{
 	case PivotType::Center:
-		Pivot = { 0.5f, 0.5f };
+		Pivot = {0.5f, 0.5f};
 		break;
 	case PivotType::Bottom:
 		Pivot = { 0.5f, 1.0f };

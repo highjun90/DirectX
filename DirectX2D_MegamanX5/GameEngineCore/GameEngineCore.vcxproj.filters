@@ -127,6 +127,9 @@
     <ClInclude Include="GameEngineSpriteRenderer.h">
       <Filter>Rendering</Filter>
     </ClInclude>
+    <ClInclude Include="ThirdParty\DirectXTex\inc\DirectXTex.h">
+      <Filter>ThirdParty\inc</Filter>
+    </ClInclude>
     <ClInclude Include="GameEngineSampler.h">
       <Filter>Resources\Texture</Filter>
     </ClInclude>
@@ -135,9 +138,6 @@
     </ClInclude>
     <ClInclude Include="GameEngineCollisionGroup.h">
       <Filter>Collision</Filter>
-    </ClInclude>
-    <ClInclude Include="ThirdParty\DirectXTex\inc\DirectXTex.h">
-      <Filter>ThirdParty\inc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -242,11 +242,11 @@
     <Library Include="ThirdParty\DirectXTex\lib\Release\DirectXTex.lib">
       <Filter>ThirdParty\Release</Filter>
     </Library>
-    <Library Include="ThirdParty\DirectXTex\lib\Debug\DirectXTex.pdb">
-      <Filter>ThirdParty\Debug</Filter>
-    </Library>
     <Library Include="ThirdParty\DirectXTex\lib\Release\DirectXTex.pdb">
       <Filter>ThirdParty\Release</Filter>
+    </Library>
+    <Library Include="ThirdParty\DirectXTex\lib\Debug\DirectXTex.pdb">
+      <Filter>ThirdParty\Debug</Filter>
     </Library>
   </ItemGroup>
 </Project>

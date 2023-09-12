@@ -58,7 +58,6 @@ protected:
 private:
 	class GameEngineCamera* Camera = nullptr;
 	std::shared_ptr<class GameEngineInputLayOut> LayOut = nullptr;
-
 	// int CameraOrder = 0;
 };
 

@@ -102,7 +102,6 @@ void GameEngineLevel::AllReleaseCheck()
 
 			if (false == (*Start)->IsDeath())
 			{
-	
 				++Start;
 				continue;
 			}

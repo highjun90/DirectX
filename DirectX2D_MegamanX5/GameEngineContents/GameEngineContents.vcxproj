@@ -163,27 +163,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CharacterSelectImage.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
     <ClCompile Include="ContentsCore.cpp">
       <SubType>
       </SubType>
     </ClCompile>
-    <ClCompile Include="LevelCharacterSelect.cpp">
+    <ClCompile Include="Monster.cpp">
       <SubType>
       </SubType>
     </ClCompile>
-    <ClCompile Include="LevelJungle.cpp">
+    <ClCompile Include="Player.cpp">
       <SubType>
       </SubType>
     </ClCompile>
-    <ClCompile Include="LevelTitle.cpp">
+    <ClCompile Include="PlayLevel.cpp">
       <SubType>
       </SubType>
     </ClCompile>
-    <ClCompile Include="MapImageJungle.cpp">
+    <ClCompile Include="PlayMap.cpp">
       <SubType>
       </SubType>
     </ClCompile>
@@ -193,47 +189,35 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="TitleImage.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
-    <ClCompile Include="Zero.cpp">
+    <ClCompile Include="TitleLevel.cpp">
       <SubType>
       </SubType>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CharacterSelectImage.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
     <ClInclude Include="ContentsCore.h">
       <SubType>
       </SubType>
     </ClInclude>
     <ClInclude Include="ContentsEnum.h" />
-    <ClInclude Include="LevelCharacterSelect.h">
+    <ClInclude Include="Monster.h">
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="LevelJungle.h">
+    <ClInclude Include="Player.h">
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="LevelTitle.h">
+    <ClInclude Include="PlayLevel.h">
       <SubType>
       </SubType>
     </ClInclude>
-    <ClInclude Include="MapImageJungle.h">
+    <ClInclude Include="PlayMap.h">
       <SubType>
       </SubType>
     </ClInclude>
     <ClInclude Include="PreCompile.h" />
-    <ClInclude Include="TitleImage.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="Zero.h">
+    <ClInclude Include="TitleLevel.h">
       <SubType>
       </SubType>
     </ClInclude>
